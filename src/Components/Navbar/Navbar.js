@@ -77,6 +77,20 @@ const Navbar = ({ user }) => {
                 smooth: "easeInOutQuart", // Efek easing (percepatan/perlambatan)
               });
             }}
+            to="/layanan-desa"
+            className="nav-link"
+          >
+            Layanan Desa
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link
+            onClick={() => {
+              scroll.scrollToTop({
+                duration: 100, // Durasi animasi dalam milidetik
+                smooth: "easeInOutQuart", // Efek easing (percepatan/perlambatan)
+              });
+            }}
             to="/financial-report"
             className="nav-link"
           >
@@ -179,7 +193,7 @@ const Navbar = ({ user }) => {
             >
               {user.fullName}
             </Link>
-            <button className="logout-button" onClick={handleLogout}>
+            <button className="logout-button" style={{backgroundColor:'green'}} onClick={handleLogout}>
               Logout
             </button>
           </>

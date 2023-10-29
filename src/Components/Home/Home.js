@@ -11,28 +11,22 @@ const Home = () => {
 
   const dataRonda = [
     {
-      lokasi: "Dusun 1",
-      petugas: "Cahyo",
+      petugas: "Cahyo Prima (Dusun 1 RW 02)",
     },
     {
-      lokasi: "Perumahan XYZ",
-      petugas: ["Alice Johnson", "Bob Brown"],
+      petugas: "Bambang Surya (Dusun 3 RW 01)",
     },
     {
-      lokasi: "Perumahan 123",
-      petugas: ["Eva Wilson", "David Clark"],
+      petugas: "Hartato Budi (Dusun 1 RW 01)",
     },
     {
-      lokasi: "Perumahan PQR",
-      petugas: ["Grace Lee", "Robert White"],
+      petugas: "Anto Kadir (Dusun 2 RW 01)",
     },
     {
-      lokasi: "Perumahan LMN",
-      petugas: ["Helen Davis", "Michael Hall"],
+      petugas: "Bagas Bina (Dusun 2 RW 02)",
     },
     {
-      lokasi: "Perumahan RST",
-      petugas: ["Olivia Turner", "William Adams"],
+      petugas: "Bowo Karyo (Dusun 3 RW 02)",
     },
   ];
 
@@ -110,9 +104,7 @@ const Home = () => {
               <tbody>
                 <tr>
                   {dataRonda.map((ronda, index) => (
-                    <td key={index}>
-                      {`${ronda.petugas} dari dusun ${ronda.lokasi}`}
-                    </td>
+                    <td key={index}>{`${ronda.petugas}`}</td>
                   ))}
                 </tr>
               </tbody>
@@ -129,9 +121,9 @@ const Home = () => {
         }}
       >
         <h1 style={{ color: "white", textAlign: "center" }}>
-          VIDEO AYAM MAKAN BERAS
+          Video Aksi Peduli Alam
         </h1>
-        <hr />   
+        <hr />
         <div style={{ marginTop: "30px" }}>
           <YoutubeVideo videoId={"MesxaHEdMNQ?si=X717OXexZ7cCfF_6"} />
         </div>
