@@ -12,3 +12,4 @@ export const Umkm = require("./umkm.png");
 export const Umkm2 = require("./umkm2.png");
 export const IzinUmkm = require("./izinUmkm.jpeg");
 export const LoginIcon = require("./login.png");
+export const FotoBos = require("./FotoBos.jpeg");
