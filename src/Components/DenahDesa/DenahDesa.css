@@ -1,0 +1,54 @@
+.denah-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 200px;
+    margin-bottom: 290px;
+}
+
+.denah-card,
+.aktivitas-card {
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    /* Menambahkan cursor pointer ketika dihover */
+}
+
+.denah-card:hover {
+    /* margin-top: 100px; */
+    transform: scale(1.25);
+}
+
+.denah-card.expanded,
+.aktivitas-card.expanded {
+    margin-top: 100px;
+    transform: scale(2);
+    /* Menambahkan perbesaran saat card di-klik */
+}
+
+.denah-card img,
+.aktivitas-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.denah-details,
+.aktivitas-details {
+    padding: 10px;
+}
+
+.denah-details h2,
+.aktivitas-details h2 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.denah-details p,
+.aktivitas-details p {
+    font-size: 14px;
+}

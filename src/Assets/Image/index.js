@@ -13,3 +13,5 @@ export const Umkm2 = require("./umkm2.png");
 export const IzinUmkm = require("./izinUmkm.jpeg");
 export const LoginIcon = require("./login.png");
 export const FotoBos = require("./FotoBos.jpeg");
+export const peta = require("./peta.jpeg");
+export const peta2 = require("./peta2.jpeg");
