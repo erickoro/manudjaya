@@ -3,15 +3,6 @@ import { Element, Link, animateScroll as scroll } from "react-scroll";
 // import swal from "sweetalert";
 import { Modal, ModalContent } from "../Modal/Modal";
 import "./Home.css";
-import {
-  MDBCard,
-  MDBCardImage,
-  MDBCardBody,
-  MDBCardTitle,
-  MDBCardText,
-  MDBRow,
-  MDBCol,
-} from "mdb-react-ui-kit";
 // import DestinasiCarousel from "./Carousel/Carousel";
 // import BeritaScreen from "./Berita/BeritaScreen";
 // import { jadwalronda } from "../../Assets/Image/index";
