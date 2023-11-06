@@ -2,6 +2,7 @@ import React from "react";
 
 import { FotoBos } from "../../Assets/Image";
 
+
 const modal = {
   position: "fixed",
   zIndex: 1,
@@ -88,20 +89,8 @@ export const ModalContent = ({ onClose }) => {
             }}
           >
             <h1>HALO!</h1>
-            <table >
-              <thead >
-                <tr>
-                  <th>1</th>
-                  <th>2</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>4</td>
-                  <td>5</td>
-                </tr>
-              </tbody>
-            </table>
+            <h4>Calon Kepala Desa Manud Jaya</h4>
+            <h2>I Made Aditya</h2>
           </div>
         </div>
       </div>
