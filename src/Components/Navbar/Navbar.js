@@ -97,6 +97,20 @@ const Navbar = ({ user }) => {
             Keuangan
           </Link>
         </li>
+        <li className="nav-item">
+          <Link
+            onClick={() => {
+              scroll.scrollToTop({
+                duration: 100, // Durasi animasi dalam milidetik
+                smooth: "easeInOutQuart", // Efek easing (percepatan/perlambatan)
+              });
+            }}
+            to="/destinasi"
+            className="nav-link"
+          >
+            Destinasi
+          </Link>
+        </li>
         {/* <li className="nav-item">
           <Link
             onClick={() => {
@@ -193,7 +207,11 @@ const Navbar = ({ user }) => {
             >
               {user.fullName}
             </Link>
-            <button className="logout-button" style={{backgroundColor:'green'}} onClick={handleLogout}>
+            <button
+              className="logout-button"
+              style={{ backgroundColor: "green" }}
+              onClick={handleLogout}
+            >
               Logout
             </button>
           </>

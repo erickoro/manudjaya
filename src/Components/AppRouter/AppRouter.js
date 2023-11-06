@@ -26,6 +26,7 @@ import InputUmkm from "../InputUmkm/InputUmkm";
 import UMKMApproval from "../Umkm/UMKMApproval";
 import FinancialReport from "../FinancialReport/FinancialReport";
 import LayananDesa from "../LayananDesa/LayananDesa";
+import Destinasi from "../Destinasi/Destinasi";
 
 const AppRouter = ({ user }) => {
   return (
@@ -36,6 +37,14 @@ const AppRouter = ({ user }) => {
           element={
             <Layout>
               <BlankPage />
+            </Layout>
+          }
+        />
+        <Route
+          path="/destinasi"
+          element={
+            <Layout>
+              <Destinasi />
             </Layout>
           }
         />

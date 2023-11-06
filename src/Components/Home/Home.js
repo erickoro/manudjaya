@@ -10,18 +10,17 @@ import {
   MDBCardTitle,
   MDBCardText,
   MDBRow,
-  MDBCol
-} from 'mdb-react-ui-kit';
+  MDBCol,
+} from "mdb-react-ui-kit";
 // import DestinasiCarousel from "./Carousel/Carousel";
 // import BeritaScreen from "./Berita/BeritaScreen";
 // import { jadwalronda } from "../../Assets/Image/index";
 
-
 const Home = () => {
   const [isOpen, setIsopen] = React.useState(true);
-  console.log(isOpen)
+  console.log(isOpen);
   const showModal = () => {
-    setIsopen((prev) => !prev)
+    setIsopen((prev) => !prev);
   };
   const daysOfWeek = ["Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
 
@@ -62,7 +61,6 @@ const Home = () => {
     );
   };
 
-
   //  popupS.window({
   //    mode: 'alert',
   //    content: "Hello World"
@@ -78,164 +76,102 @@ const Home = () => {
 
   return (
     <>
-      {
-        !isOpen ? (
-          <div className="home-container">
-            <div>
-              <div className="hero-section" style={{ marginLeft: '400px' }}>
-                <h1 className="hero-title">Selamat datang di Desa Manud Jaya</h1>
-                <p className="hero-subtitle">
-                  Temukan keindahan alam dan budaya kami yang luar biasa.
-                </p>
-                <Link
-                  onClick={() => {
-                    scroll.scrollToTop({
-                      duration: 100, // Durasi animasi dalam milidetik
-                      smooth: "easeInOutQuart", // Efek easing (percepatan/perlambatan)
-                    });
-                  }}
-                  to="destinasi-carousel"
-                  smooth={true}
-                  duration={100}
-                >
-                  <button className="hero-button">Pelajari Lebih Lanjut</button>
-                </Link>
-              </div>
-              <div
+      {!isOpen ? (
+        <div className="home-container">
+          <div>
+            <div className="hero-section" style={{ marginLeft: "400px" }}>
+              <h1 className="hero-title">Selamat datang di Desa Manud Jaya</h1>
+              <p className="hero-subtitle">
+                Temukan keindahan alam dan budaya kami yang luar biasa.
+              </p>
+              <Link
+                onClick={() => {
+                  scroll.scrollToTop({
+                    duration: 100, // Durasi animasi dalam milidetik
+                    smooth: "easeInOutQuart", // Efek easing (percepatan/perlambatan)
+                  });
+                }}
+                to="/destinasi"
+                className="hero-button"
+              >
+                Pelajari Lebih Lanjut
+              </Link>
+            </div>
+            <div
+              style={{
+                backgroundColor: "black",
+                opacity: 0.7,
+                margin: "40px",
+                borderRadius: 36,
+                padding: "20px",
+                paddingTop: "40px",
+              }}
+            >
+              <h1
                 style={{
-                  backgroundColor: "black",
-                  opacity: 0.7,
-                  margin: "40px",
-                  borderRadius: 36,
-                  padding: "20px",
-                  paddingTop: "40px",
+                  color: "white",
+                  textAlign: "center",
                 }}
               >
-                <h1
-                  style={{
-                    color: "white",
-                    textAlign: "center",
-                  }}
-                >
-                  Jadwal Ronda
-                </h1>
+                Jadwal Ronda
+              </h1>
+              <hr />
+              <div>
                 <hr />
                 <div>
-                  <hr />
-                  <div>
-                    <table
-                      style={{ color: "white", border: "black", marginTop: "50px" }}
-                    >
-                      <thead>
-                        <tr>
-                          {daysOfWeek.map((day) => (
-                            <th key={day}>{day}</th>
-                          ))}
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          {dataRonda.map((ronda, index) => (
-                            <td key={index}>{`${ronda.petugas}`}</td>
-                          ))}
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
-              <div
-                style={{
-                  margin: "60px",
-                  backgroundColor: "black",
-                  borderRadius: "16px",
-                  padding: "30px",
-                }}
-              >
-                <h1 style={{ color: "white", textAlign: "center" }}>
-                  Video Aksi Peduli Alam
-                </h1>
-                <hr />
-                <div style={{ marginTop: "30px" }}>
-                  <YoutubeVideo videoId={"MesxaHEdMNQ?si=X717OXexZ7cCfF_6"} />
+                  <table
+                    style={{
+                      color: "white",
+                      border: "black",
+                      marginTop: "50px",
+                    }}
+                  >
+                    <thead>
+                      <tr>
+                        {daysOfWeek.map((day) => (
+                          <th key={day}>{day}</th>
+                        ))}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        {dataRonda.map((ronda, index) => (
+                          <td key={index}>{`${ronda.petugas}`}</td>
+                        ))}
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </div>
             </div>
+            <div
+              style={{
+                margin: "60px",
+                backgroundColor: "black",
+                borderRadius: "16px",
+                padding: "30px",
+              }}
+            >
+              <h1 style={{ color: "white", textAlign: "center" }}>
+                Video Aksi Peduli Alam
+              </h1>
+              <hr />
+              <div style={{ marginTop: "30px" }}>
+                <YoutubeVideo videoId={"MesxaHEdMNQ?si=X717OXexZ7cCfF_6"} />
+              </div>
+            </div>
           </div>
-        ) : (<div style={{
-          marginTop: '700px'
-        }}>
+        </div>
+      ) : (
+        <div
+          style={{
+            marginTop: "700px",
+          }}
+        >
           <ModalContent onClose={() => showModal()}></ModalContent>
-        </div>)
-      }
-      <MDBRow className='row-cols-1 row-cols-md-2 g-4'>
-      <MDBCol>
-        <MDBCard>
-          <MDBCardImage
-            src='https://mdbootstrap.com/img/new/standard/city/041.webp'
-            alt='...'
-            position='top'
-          />
-          <MDBCardBody>
-            <MDBCardTitle>Card title</MDBCardTitle>
-            <MDBCardText>
-              This is a longer card with supporting text below as a natural lead-in to additional content.
-              This content is a little bit longer.
-            </MDBCardText>
-          </MDBCardBody>
-        </MDBCard>
-      </MDBCol>
-      <MDBCol>
-        <MDBCard>
-          <MDBCardImage
-            src='https://mdbootstrap.com/img/new/standard/city/042.webp'
-            alt='...'
-            position='top'
-          />
-          <MDBCardBody>
-            <MDBCardTitle>Card title</MDBCardTitle>
-            <MDBCardText>
-              This is a longer card with supporting text below as a natural lead-in to additional content.
-              This content is a little bit longer.
-            </MDBCardText>
-          </MDBCardBody>
-        </MDBCard>
-      </MDBCol>
-      <MDBCol>
-        <MDBCard>
-          <MDBCardImage
-            src='https://mdbootstrap.com/img/new/standard/city/043.webp'
-            alt='...'
-            position='top'
-          />
-          <MDBCardBody>
-            <MDBCardTitle>Card title</MDBCardTitle>
-            <MDBCardText>
-              This is a longer card with supporting text below as a natural lead-in to additional content.
-              This content is a little bit longer.
-            </MDBCardText>
-          </MDBCardBody>
-        </MDBCard>
-      </MDBCol>
-      <MDBCol>
-        <MDBCard>
-          <MDBCardImage
-            src='https://mdbootstrap.com/img/new/standard/city/044.webp'
-            alt='...'
-            position='top'
-          />
-          <MDBCardBody>
-            <MDBCardTitle>Card title</MDBCardTitle>
-            <MDBCardText>
-              This is a longer card with supporting text below as a natural lead-in to additional content.
-              This content is a little bit longer.
-            </MDBCardText>
-          </MDBCardBody>
-        </MDBCard>
-      </MDBCol>
-    </MDBRow>
+        </div>
+      )}
     </>
-
   );
 };
 
