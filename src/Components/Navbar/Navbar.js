@@ -111,6 +111,20 @@ const Navbar = ({ user }) => {
             Destinasi
           </Link>
         </li>
+        <li className="nav-item">
+          <Link
+            onClick={() => {
+              scroll.scrollToTop({
+                duration: 100, // Durasi animasi dalam milidetik
+                smooth: "easeInOutQuart", // Efek easing (percepatan/perlambatan)
+              });
+            }}
+            to="/denah"
+            className="nav-link"
+          >
+            Denah Desa
+          </Link>
+        </li>
         {/* <li className="nav-item">
           <Link
             onClick={() => {
